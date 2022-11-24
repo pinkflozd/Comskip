@@ -44,7 +44,6 @@ double test_pts = 0.0;
 #include <libavutil/samplefmt.h>
 #include <libswscale/swscale.h>
 
-#ifdef HARDWARE_DECODE
 #include <fftools/ffmpeg.h>
 const HWAccel hwaccels[] = {
 #if HAVE_VDPAU_X11
@@ -61,7 +60,6 @@ const HWAccel hwaccels[] = {
 
 static InputStream inputs;
 static InputStream *ist = &inputs;
-#endif
 
 
 extern int      hardware_decode;
